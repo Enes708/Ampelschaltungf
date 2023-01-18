@@ -1,0 +1,25 @@
+basic.forever(function () {
+    if (pins.digitalReadPin(DigitalPin.P2) == 1) {
+        pins.digitalWritePin(DigitalPin.P12, 1)
+        basic.pause(1000)
+        pins.digitalWritePin(DigitalPin.P3, 0)
+        pins.digitalWritePin(DigitalPin.P0, 1)
+        basic.pause(1000)
+        pins.digitalWritePin(DigitalPin.P0, 0)
+        pins.digitalWritePin(DigitalPin.P4, 1)
+        basic.pause(1000)
+        pins.digitalWritePin(DigitalPin.P12, 0)
+        pins.digitalWritePin(DigitalPin.P11, 1)
+        basic.pause(5000)
+        pins.digitalWritePin(DigitalPin.P11, 0)
+        pins.digitalWritePin(DigitalPin.P12, 1)
+        basic.pause(1000)
+        pins.digitalWritePin(DigitalPin.P0, 1)
+        basic.pause(1000)
+        pins.digitalWritePin(DigitalPin.P0, 0)
+        pins.digitalWritePin(DigitalPin.P12, 0)
+    } else {
+        pins.digitalWritePin(DigitalPin.P3, 1)
+        pins.digitalWritePin(DigitalPin.P12, 1)
+    }
+})
